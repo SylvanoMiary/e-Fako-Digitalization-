@@ -12,11 +12,4 @@
 </template>
 
 <style>
-    .content-title{
-        margin: 0;
-        padding: 0;
-    }
-    .content-title p{
-        padding-bottom: 50px;
-    }
 </style>

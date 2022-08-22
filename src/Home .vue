@@ -1,10 +1,21 @@
+<script>
+  export default{
+    data(){
+      return{
+        username: "",
+        password: "",
+      }
+    }
+  }
+</script>
+
 <template>
     <div class="wrapper">
         <div class="logo">
             <h1>e-Fako</h1>
             <p>Let's preserve our environment</p>
         </div>
-        <div class="container">
+        <div class="container login">
             <div class="content-icon">
               <font-awesome-icon icon="circle-user" class="icon1"/>
               <hr>
@@ -13,11 +24,11 @@
                 <form class="content-input">
                     <div class="Username-Input">
                         <font-awesome-icon icon="user" class="iconInput"/>
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" v-model="username">
                     </div>
                     <div class="Password-Input">
                         <font-awesome-icon icon="key" class="iconInput"/>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" v-model="password">
                     </div>
                     <div class="forget">
                         <a href="#/forget_password">Forget password?</a>
@@ -53,7 +64,7 @@
     display: flex;
     justify-content: center;
   }
-  .container{
+  .login{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -65,11 +76,6 @@
     height: 500px;
     left: 792px;
     top: 50px;
-    background: linear-gradient(147.84deg, rgba(255, 255, 255, 0.24) 0.89%, rgba(255, 255, 255, 0) 97.74%);
-    box-shadow: inset 0px 5px 4px rgba(255, 255, 255, 0.16);
-    backdrop-filter: blur(40px);
-    border-radius: 30px;
-    color: #FFFFFF;
   }
   .content-login{
     padding: 0px 50px 0px 50px;

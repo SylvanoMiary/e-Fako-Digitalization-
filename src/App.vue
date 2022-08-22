@@ -2,12 +2,14 @@
 import Home from './Home .vue'
 import Inscription1 from './Inscription1.vue'
 import Inscription2 from './Inscription2.vue'
+import Apprendre from './Apprendre.vue'
 import NotFound from './NotFound.vue'
 
 const routes = {
   '/': Home,
   '/inscription_step1': Inscription1,
-  '/inscription_step2': Inscription2
+  '/inscription_step2': Inscription2,
+  '/apprendre' : Apprendre
 }
 
 export default{
@@ -25,17 +27,12 @@ export default{
         window.addEventListener("hashchange", () => {
             this.currentPath = window.location.hash;
         });
-    },
-    methods:{
-      message(){
-        console.log(window.location.hash)
-      }
-    }, 
+    }
 }
 </script>
 
 <template>
-  <div class="Container">
+  <div class="Container-App">
     <component :is="currentView"/>
   </div>
 </template>

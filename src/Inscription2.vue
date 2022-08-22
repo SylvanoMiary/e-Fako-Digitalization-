@@ -17,7 +17,7 @@
 <template>
     <div class="wrapper">
         <Titleinscription title="STEP 2" intro="Choose the schedule that suits you"/>
-        <div class="content-schedules">
+        <div class="container step schedules">
             <div class="choose">
                 <fieldset class="days">
                     <legend>Days</legend>
@@ -51,24 +51,24 @@
         margin: 10px 100px 10px 100px;
         padding: 0;
     }
-    .content-schedules{
+    .schedules{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .content-schedules input, .content-schedules tr ,.content-schedules td , .content-schedules table{
+    .schedules input, .schedules tr ,.schedules td , .schedules table{
         padding: 0;
         margin: 0;
     }
-    .content-schedules input{
+    .schedules input{
         height: 20px;
     }
-    .content-schedules fieldset{
+    .schedules fieldset{
         padding: 30px;
         text-align: left;
         width: 100px;
     }
-    .content-schedules button{
+    .schedules button{
         width: 150px;
         height: 40px;
         cursor: pointer;
