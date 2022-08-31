@@ -5,14 +5,20 @@
         username: "",
         password: "",
       }
+    },
+    methods:{
+        submitHandler(e){
+          e.preventDefault()
+          alert("Username = " + this.username + "\nPassword = " + this.password)
+        }
     }
   }
 </script>
 
 <template>
-    <div class="wrapper">
+    <div class="wrapper-login">
         <div class="logo">
-            <h1>e-Fako</h1>
+            <img src="./assets/logo.png" alt="logo">
             <p>Let's preserve our environment</p>
         </div>
         <div class="container login">
@@ -21,7 +27,7 @@
               <hr>
             </div>
             <div class="content-login">
-                <form class="content-input">
+                <form class="content-input" @submit="submitHandler">
                     <div class="Username-Input">
                         <font-awesome-icon icon="user" class="iconInput"/>
                         <input type="text" placeholder="Username" v-model="username">
@@ -30,11 +36,11 @@
                         <font-awesome-icon icon="key" class="iconInput"/>
                         <input type="password" placeholder="Password" v-model="password">
                     </div>
-                    <div class="forget">
-                        <a href="#/forget_password">Forget password?</a>
+                    <div class="forgot">
+                        <a href="#/forgot_password">Forgot password?</a>
                     </div>
                     <div class="button">
-                        <button>LOGIN</button>
+                        <button type="submit">LOGIN</button>
                     </div>                                        
                 </form>
                 <div class="content-card">
@@ -51,31 +57,35 @@
     margin: 0;
     padding: 0;
   }
-  .logo{
-    position: absolute;
-    left: 200px;
-    top: 200px;
-    opacity: 0.8;
+  .logo p{
+    z-index: 1;
+    position: relative;
+    bottom: 200px;
+    left: 280px;
+    color: black;
   }
-  .logo h1{
-    font-size: 120px;
+
+  .logo img{
+    z-index: 0;
+    height: 500px;
+
   }
-  .wrapper{
+  .wrapper-login{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5.9% 0;
+    background-image: linear-gradient(150.84deg, rgb(253, 245, 245), rgb(85, 79, 0));
+    background-size: contain;
   }
   .login{
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-right: 50px;
     padding: 2px 10px 10px 10px;
     width: 400px;
     height: 500px;
-    left: 792px;
-    top: 50px;
   }
   .content-login{
     padding: 0px 50px 0px 50px;
@@ -95,12 +105,12 @@
     border-bottom: 2px solid #CDCDCD;
     display: flex;
   }
-  .forget{
+  .forgot{
     margin-bottom: 20px;
     margin-top: 5px;
     text-align: left;
   }
-  .forget a{
+  .forgot a{
     text-decoration: none;
     color: #CDCDCD;
   }

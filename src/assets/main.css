@@ -1,6 +1,6 @@
 body{
-  color:aliceblue;
-  background-color: #282828;
+  color:black;
+  background-size: auto;
   transition: background-color 1.5s, color 1.5s;
   margin: 0;
   padding: 0;
@@ -10,17 +10,11 @@ body{
   box-shadow: inset 0px 5px 4px rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(40px);
   border-radius: 30px;
-  color: #FFFFFF;
+
 }
 .step{
   padding: 30px;
   width: 800px;
   position: relative;
   left: 250px;
-}
-.content-title{
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.24) 0.89%, rgba(255, 255, 255, 0) 97.74%);
-  backdrop-filter: blur(40px);
-  padding-bottom: 10px;
-  margin-bottom: 20px;
 }

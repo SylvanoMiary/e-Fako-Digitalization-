@@ -15,9 +15,9 @@
 </script>
 
 <template>
-    <div class="wrapper">
+    <div class="wrapper-schedule">
         <Titleinscription title="STEP 2" intro="Choose the schedule that suits you"/>
-        <div class="container step schedules">
+        <div class="schedules">
             <div class="choose">
                 <fieldset class="days">
                     <legend>Days</legend>
@@ -37,24 +37,34 @@
                         </tr>
                     </table>
                 </fieldset>
-            </div>
-            <div>
-                <button>SUBMIT</button>
+                <div>
+                    <button>SUBMIT</button>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <style>
+    .wrapper-schedule{
+        background-image: url("./assets/Step2_image.png");
+        background-size: 1000px 800px;
+        background-position: 0px -90px;
+        background-repeat: no-repeat;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
     .days, .hours{
         display: inline-block;
         margin: 10px 100px 10px 100px;
         padding: 0;
     }
     .schedules{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        margin-top: 50px;
+        backdrop-filter: blur(10px);
     }
     .schedules input, .schedules tr ,.schedules td , .schedules table{
         padding: 0;
@@ -74,6 +84,7 @@
         cursor: pointer;
         font-size: 18px;
         border-radius: 50px;
+        margin-top: 50px;
     }
     .choose{
         margin-bottom: 30px;

@@ -12,4 +12,11 @@
 </template>
 
 <style>
+    .content-title{
+        position: relative;
+        background-image: linear-gradient(180deg, transparent, transparent);
+        backdrop-filter: blur(5px);
+        text-align: center;
+        z-index: 1;
+    }
 </style>

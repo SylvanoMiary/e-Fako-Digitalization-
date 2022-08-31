@@ -12,26 +12,41 @@ export default{
     },
     components: {
         Titleinscription
+    },
+    methods:{
+        nextHandler(){
+            alert("Name = " + this.name + 
+                    "\ntel = " + this.tel +
+                    "\nmail = " + this.mail +
+                    "\naddress = " + this.adress
+                    )
+        }
     }
 }
 
 </script>
 
 <template>
-    <div class="wrapper">
+    <div class="wrapper-inscription1">
         <Titleinscription title="STEP 1" intro="Please enter your information"/>
-        <div class="container step inscription">
-            <table align="center">
-                <tr>
-                    <td><input type="text" placeholder="Name" v-model="name"></td>
-                    <td><input type="tel" placeholder="Number phone" v-model="tel" @input="warningTel(tel)"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" placeholder="E-mail" v-model="mail"></td>
-                    <td><input type="text" placeholder="Adress" v-model="adress"></td>
-                </tr>
-            </table>
-            <a href="#/inscription_step2"><font-awesome-icon icon="arrow-circle-right" class="icon"/></a>
+        <div class="container-inscription">
+            <form class="table">
+                <table align="center">
+                    <tr>
+                        <td><input type="text" placeholder="Name" v-model="name"></td>
+                        <td><input type="tel" placeholder="Number phone" v-model="tel"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="E-mail" v-model="mail"></td>
+                        <td><input type="text" placeholder="Adress" v-model="adress"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="button">
+                            <a href="#/inscription_step2" @click="nextHandler"><font-awesome-icon icon="arrow-circle-right" class="icon"/></a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </div>
 </template>
@@ -42,21 +57,39 @@ export default{
         margin: 50px;
         color: rgb(46, 38, 38);
     }
-    .wrapper{
+    .wrapper-inscription1{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        background-image: url(./assets/Step1.png); 
+        background-size: 900px 700px;
+        background-position: 10px 0px;
+        background-repeat: no-repeat;
+        height: 680px;
     }
     input{
+        display: flex;
         border: none;
         font-size: 25px;
         background-color: transparent;
         font-family: Poppins;
         height: 50px;
-        color: #FFFFFF;
-        border-bottom: 2px solid #CDCDCD;
+        color: black;
+        border-bottom: 2px solid black;
+        
+        margin: 10px 50px;
+    }
+    .container-inscription{
+        display: inline-table;
+        margin-top: 70px;
+    }
+    .container-inscription .table{
         display: flex;
-        margin: 20px 50px;
+        flex-direction: column;
+        justify-content: center;
+        backdrop-filter: blur(8px);
+        z-index: 1;
+    }
+    .container-inscription .button{
+        text-align: center;
     }
 </style>
