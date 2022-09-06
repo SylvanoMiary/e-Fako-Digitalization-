@@ -1,5 +1,5 @@
 <script>
-import Titleinscription from "./components/Titleinscription.vue";
+import Titleinscription from "../components/Titleinscription.vue";
 
 export default{
     data(){
@@ -33,12 +33,12 @@ export default{
             <form class="table">
                 <table align="center">
                     <tr>
-                        <td><input type="text" placeholder="Name" v-model="name"></td>
-                        <td><input type="tel" placeholder="Number phone" v-model="tel"></td>
+                        <td><input type="text" placeholder="Name" v-model="name" required></td>
+                        <td><input type="tel" placeholder="Number phone" v-model="tel" required></td>
                     </tr>
                     <tr>
-                        <td><input type="text" placeholder="E-mail" v-model="mail"></td>
-                        <td><input type="text" placeholder="Adress" v-model="adress"></td>
+                        <td><input type="text" placeholder="E-mail" v-model="mail" required></td>
+                        <td><input type="text" placeholder="Adress" v-model="adress" required></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="button">
@@ -60,7 +60,7 @@ export default{
     .wrapper-inscription1{
         display: flex;
         flex-direction: column;
-        background-image: url(./assets/Step1.png); 
+        background-image: url(../assets/Step1.png); 
         background-size: 900px 700px;
         background-position: 10px 0px;
         background-repeat: no-repeat;
