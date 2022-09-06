@@ -1,5 +1,7 @@
+
 body{
     margin: 0px;
+
    
 }
 
@@ -23,6 +25,8 @@ body{
     margin-left: 80px;
     margin-top: 10px;
     margin-right: 20px;
+
+    padding: 0px;
     display: grid;
     grid-template-columns: auto auto auto auto  ;
   
@@ -30,61 +34,60 @@ body{
     font-style: normal;
     font-size: 25px;
     line-height: 31px;
-    padding-bottom: 5px;
+
+
+    
 }
 .header ul :hover{
    color: rgb(247, 152, 11);
 }
 .bar{
-    margin-top: 5px;
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
     border-top: 1px solid;
-    width: 750px;
-   
+    width: 50%;
 
 }
-.container{
-    margin:0px;
-    width:100% ;
-    min-height: 700px;
-    height:auto ;
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns: 450px auto;
- } 
 
- .nav_bar{
-    margin-left: 10px;
+.nav_bar{
+    margin-left: 20px;
+    padding: 0px;
     margin-top: 60px;
     padding-top: 100px;
+    background: rgba(217, 217, 217, 0.68);
  }
  .nav_bar ul{
- 
+    margin: 0px;
+    padding: 0px;
     list-style-type: none;
   
-    margin-right: 30px;
     display: grid;
     grid-template-rows: auto auto auto   ;
     grid-gap: 60px;
   
     font-family: 'Times New Roman';
     font-style: normal;
-    font-size: 25px;;
+    font-size: 25px;
+    
+  
+ }
+  
+ .nav_bar ul li{
+    background-color: #D3930A ;
+    color: aliceblue;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 10px;
+    min-width: 250px;
+   
+
+
  }
 
-.Donnés {
-    margin-top: 60px;
-    padding: 25px;
+ .nav_bar ul li:hover{
     width: 90%;
-    height: 600px;
-    border: 2px solid;
-    display: grid;
-    grid-template-columns: 250px 250px auto;
-    grid-gap: 10px;
-}
-
-.Donnés div{
-    font-size: 20px;
-    font-weight: bold;
-}
+    border-radius: 0px;
+ }

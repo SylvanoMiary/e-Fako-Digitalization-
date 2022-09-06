@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="customer.css">
     <title>Document</title>
+    <script src="table_data.js"></script>
 </head>
 <body>
     <div class="header">
@@ -29,13 +30,14 @@
                 <li>Customer information</li>
                 <li>Confirmation e-mail</li>
             </ul>
+        </div >
+        <div id="tab">
+            <ul class="th">
+                <li class="th1">Id</li>
+                <li class="th2">Name</li>
+            </ul>
         </div>
-        <div class="infos">
-            <div class="Donnés">
-                  <div>Name</div>
-                  <div>Adresse</div>
-                  <div>Email</div>
-            </div>
+         
         </div>
 
     </div>
@@ -48,27 +50,45 @@
     min-height: 700px;
     height:auto ;
     display: grid;
-    grid-gap: 50px;
-    grid-template-columns: 1fr 3fr;
+    grid-gap: 30px;
+    grid-template-columns: 1.5fr 2fr  2fr;
  } 
 
-
-.Donnés {
+   #tab{
     margin-top: 60px;
-    padding: 25px;
+    padding: 0px;
     width: 90%;
-    height: 600px;
-    border: 2px solid;
-    display: grid;
-    grid-template-columns: auto  auto  auto;
-    grid-gap: 10px;
-}
 
-.Donnés div{
-    font-size: 20px;
-    font-weight: bold;
-}
+   
+   }
+  #tab ul{
+    background-color: #E4D8D8C9;
+    margin: 0px;
+    padding: 0px;;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-gap: 0px;
+    list-style-type: none;
     
+   
+  }
+  #tab ul li{
+     min-height: 20px;
+     text-align: center;
+     
+  }
+  .th1, .th2{
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    
+   
+  }
+  .th1{
+    border-right: 1px solid;
+    
+  }
+ 
     
     </style>
 
