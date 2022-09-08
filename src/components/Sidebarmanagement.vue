@@ -2,23 +2,22 @@
    export default{
       data(){
          return{
-
+            
          }
       },
       methods:{
          submit(){
             this.$emit('submit')
          }
-      }
+      },
+      props: ['nav']
    }
 </script>
 
 <template>
     <div class="sidebar">
             <ul>
-                <li @click="$emit('clickHandler', 0)">Customer request</li>
-                <li @click="$emit('clickHandler', 1)">Customer information</li>
-                <li @click="$emit('clickHandler', 2)">Confirmation e-mail</li>
+                <li @click="( $emit('clickHandler', item))" v-for="(li, item) in nav">{{li}}</li>
             </ul>
         </div>
 </template>

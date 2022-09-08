@@ -4,10 +4,10 @@
            <img src="icon.png" alt="e-fako"> 
         </div>
         <ul>
-           <a href="#">CUSTOMER MANAGEMENT</a>
-           <a href="#">TASK MANAGEMENT</a>
-           <a href="#">PERSONNEL MANAGEMENT</a>
-           <a href="#">TOOLS MANAGEMENT</a>
+           <a href="#/admin/management">CUSTOMER MANAGEMENT</a>
+           <a href="#/admin/taskmanagement">TASK MANAGEMENT</a>
+           <a href="#/admin/personnelmanagement">PERSONNEL MANAGEMENT</a>
+           <a href="#/admin/toolsmanagement">TOOLS MANAGEMENT</a>
         </ul>
     </div>
     <hr class="line">

@@ -6,6 +6,8 @@ import NotFound from './Pages/NotFound.vue'
 import Login from './Pages/Login.vue'
 import Done from './Pages/Done.vue'
 import Management from './Pages/Management.vue'
+import Taskmanagement from './Pages/Taskmanagement.vue'
+import Personnelmanagement from './Pages/Personnelmanagement.vue'
 
 const routes = {
   '/': Home,
@@ -13,7 +15,9 @@ const routes = {
   '/inscription_step2': Inscription2,
   '/done' : Done,
   '/admin' : Login,
-  '/admin/management' : Management
+  '/admin/management' : Management,
+  '/admin/taskmanagement' : Taskmanagement,
+  '/admin/personnelmanagement' : Personnelmanagement
 }
 
 export default{

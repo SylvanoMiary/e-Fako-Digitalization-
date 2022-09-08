@@ -1,7 +1,7 @@
 <template>
     <Headermanagement/>
     <div class="body-management">
-        <Sidebarmanagement @click-handler='callback'/>
+        <Sidebarmanagement @click-handler='callback' :nav="sidebar"/>
         <Tablemanagement :line="changeComponent"/>
         <AboutClient v-show="isTrue" :n="n"/>
     </div>
@@ -37,7 +37,8 @@ import AboutClient from '../components/AboutClient.vue';
                 ],
                 changeComponent: ["ID", "Name", "Address", "Hour", "Days", "Validate/Postpone"],
                 isTrue: false,
-                n: ""
+                n: "",
+                sidebar : ["Customer request", "Customer information", "Reconfirmation e-mail"]
             }
         },
         methods:{
