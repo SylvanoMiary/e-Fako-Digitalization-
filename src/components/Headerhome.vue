@@ -1,12 +1,11 @@
 <template>
     <div class="header">
         <div class="content-header">
-            <img src="../assets/logo.png" alt="e-fako">
+            <a href="#/"><img src="../assets/logo.png" alt="e-fako"></a>
             <h1>HOME WASTE COLLECTION AND RECYCLING</h1>
         </div>
         <div class="navBar">
             <ul>
-                <li><a href="#/">Home</a></li>
                 <li><a href="#/about">About</a></li>
                 <li><a href="#/general_rules">General Rules</a></li>
                 <li><a href="#/inscription_step1">Sign up</a></li>
@@ -18,8 +17,6 @@
 
 <style>
 .header{
-    position: sticky;
-    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +31,10 @@
 .content-header{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 0px;
+}
+.content-header a{
+    cursor: default;
 }
 .content-header img{
     position: relative;
@@ -46,8 +46,12 @@
 .navBar{
     text-align: center;
     position: relative;
-    bottom: 30px;
+    bottom: 70px;
     height: 100px;
+}
+.navBar a{
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .header h1{
@@ -56,6 +60,7 @@
     font-weight: 400;
     font-size: 40px;
     color: rgba(250, 244, 244, 0.986);
+    cursor: default;
 }
 
 .header ul{
@@ -70,5 +75,8 @@
     font-style: normal;
     font-size: 34px;
     line-height: 51px;
+}
+.header li{
+    width: 300px;
 }
 </style>

@@ -1,12 +1,16 @@
 <script>
 import Headerhome from '../components/Headerhome.vue';
-import Generalrules from './Generalrules.vue';
+import Generalrules from '../components/Generalrules.vue';
+import About from '../components/About.vue';
+import Footerhome from '../components/Footerhome.vue';
 
 export default{
     components:{
     Headerhome,
-    Generalrules
-    }
+    Generalrules,
+    About,
+    Footerhome
+}
 }
 </script>
 
@@ -25,6 +29,8 @@ export default{
         </div>
     </div>
     <Generalrules/>
+    <About/>
+    <Footerhome/>
 </template>
 
 <style>
