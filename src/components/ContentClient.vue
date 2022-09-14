@@ -3,7 +3,7 @@
         <table>
             <tr v-for="value in user">
                 <td style="text-align: left;
-                            padding-right: 30px;">{{value}}</td>
+                    padding-right: 30px;">{{value}}</td>
                 <td><font-awesome-icon icon="edit" class="icon"/></td>
             </tr>
         </table>

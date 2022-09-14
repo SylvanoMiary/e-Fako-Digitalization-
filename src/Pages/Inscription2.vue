@@ -1,5 +1,6 @@
 <script>
-    import Titleinscription from '../components/Titleinscription.vue'
+    import Titleinscription from '../components/Titleinscription.vue';
+    import axios from 'axios'
 
     export default{
         data(){
@@ -7,8 +8,7 @@
                 days:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                 hours: ["05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00"],
                 daysChecked : [],
-                hourChecked : [],
-                j : 0,
+                hourChecked : "",
                 i: 0
             }
         }, 
@@ -16,16 +16,23 @@
             Titleinscription
         },
         methods: {
-            submitHandler(){
-                alert("DayChecked = " + this.daysChecked + 
-                        "\nHourChecked = " + this.hourChecked)
-                window.open("#/done" ,'Done')
+            async submitHandler(){
+                let recovery = {};
+                [recovery.taskOwn, recovery.dayRecov, recovery.timeRecov] = [ '129' ,this.daysChecked, this.hourChecked]
+                
+                console.log(recovery);
+                let response = await axios.post("http://localhost:4200/api/task", recovery)
+                .then ( () => {
+                    console.log(`post sent: task`)
+                })
+                
+                //window.open("#/done" ,'Done')
             },
             oncheckDay(e){
                 this.daysChecked[this.i++] = e.target.value
             },
             oncheckHour(e){
-                this.hourChecked[this.j++] = e.target.value
+                this.hourChecked = e.target.value
             }
         }
     }
@@ -36,7 +43,7 @@
         <Titleinscription title="STEP 2" intro="Choose the schedule that suits you"/>
         <div class="schedules">
             <div class="choose">
-                <form action="" @submit="submitHandler">
+                <form action="">
                     <fieldset class="days">
                         <legend>Days</legend>
                         <table>
@@ -56,7 +63,7 @@
                         </table>
                     </fieldset>
                     <div>
-                        <button type="submit">SUBMIT</button>
+                        <button @click="submitHandler">SUBMIT</button>
                     </div>
                 </form>
                 

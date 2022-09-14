@@ -1,5 +1,7 @@
 <script>
 import Titleinscription from "../components/Titleinscription.vue";
+import Service from "../services/userService.js";
+import axios from 'axios';
 
 export default{
     data(){
@@ -9,18 +11,20 @@ export default{
             mail: "",
             adress: ""
         }
-    },
+    }, 
     components: {
         Titleinscription
     },
     methods:{
-        nextHandler(){
-            alert("Name = " + this.name + 
-                    "\ntel = " + this.tel +
-                    "\nmail = " + this.mail +
-                    "\naddress = " + this.adress
-                    )
-        }
+        async nextHandler(){
+            let user = {};
+            [user.f_Name, user.phone, user.mail, user.adress] = [this.name, this.tel, this.mail, this.adress]
+
+            let response = await axios.post("http://localhost:4200/api/user", user)
+            .then ( () => {
+                console.log(`post sent`)
+            })
+        }  
     }
 }
 
