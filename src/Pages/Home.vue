@@ -6,11 +6,11 @@ import Footerhome from '../components/Footerhome.vue';
 
 export default{
     components:{
-    Headerhome,
-    Generalrules,
-    About,
-    Footerhome
-}
+        Headerhome,
+        Generalrules,
+        About,
+        Footerhome
+    }
 }
 </script>
 
