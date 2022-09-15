@@ -10,17 +10,17 @@ import Taskmanagement from './Pages/Taskmanagement.vue'
 import Personnelmanagement from './Pages/Personnelmanagement.vue'
 
 const routes = {
-  '/': Home,
-  '/inscription_step1': Inscription1,
-  '/inscription_step2': Inscription2,
-  '/done' : Done,
-  '/admin' : Login,
-  '/admin/management' : Management,
-  '/admin/taskmanagement' : Taskmanagement,
-  '/admin/personnelmanagement' : Personnelmanagement
+    '/': Home,
+    '/inscription_step1': Inscription1,
+    '/inscription_step2': Inscription2,
+    '/done': Done,
+    '/admin': Login,
+    '/admin/management': Management,
+    '/admin/taskmanagement': Taskmanagement,
+    '/admin/personnelmanagement': Personnelmanagement
 }
 
-export default{
+export default {
     data() {
         return {
             currentPath: window.location.hash
@@ -36,20 +36,20 @@ export default{
             this.currentPath = window.location.hash;
         });
     },
-    components:{
+    components: {
         Management
     }
 }
 </script>
 
 <template>
-  <div class="Container-App">
-    <component :is="currentView"/>
-  </div>
+    <div class="Container-App">
+        <component :is="currentView" />
+    </div>
 </template>
 
 <style>
-    .Container-App{
-        text-align: center;
-    }
+.Container-App {
+    text-align: center;
+}
 </style>
