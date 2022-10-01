@@ -16,7 +16,7 @@
 </template>
 
 <style>
-.header{
+.header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,37 +25,42 @@
     background: linear-gradient(180.04deg, #f1ac1b 54.47%, rgba(211, 147, 10, 0) 110%);
     z-index: 1;
 }
-.header::-webkit-scrollbar{
+
+.header::-webkit-scrollbar {
     height: 100px;
 }
-.content-header{
+
+.content-header {
     display: flex;
     justify-content: center;
     margin-top: 0px;
 }
-.content-header a{
+
+.content-header a {
     cursor: default;
 }
-.content-header img{
+
+.content-header img {
     position: relative;
     padding-right: 100px;
     width: 175px;
     height: 135px;
 }
 
-.navBar{
+.navBar {
     text-align: center;
     position: relative;
     bottom: 70px;
     height: 100px;
 }
-.navBar a{
+
+.navBar a {
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.header h1{
-    font-family: 'Comic Sans MS';
+.header h1 {
+    font-family: 'Times New Roman';
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -63,12 +68,12 @@
     cursor: default;
 }
 
-.header ul{
+.header ul {
     list-style-type: none;
     margin-left: 10px;
     margin-right: 20px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto ;
+    grid-template-columns: auto auto auto auto auto;
     color: rgb(250, 250, 250);
 
     font-family: 'Consolas';
@@ -76,7 +81,8 @@
     font-size: 34px;
     line-height: 51px;
 }
-.header li{
+
+.header li {
     width: 300px;
 }
 </style>
