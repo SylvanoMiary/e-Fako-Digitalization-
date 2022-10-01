@@ -17,9 +17,12 @@
                     <td></td>
                     <td>{{task.timeRecov}}</td>
                     <td >
-                        <span v-for="it in task.dayRecov">{{it}}</span>
+                        <ul>
+                            <li v-for="it in task.dayRecov">{{it}}</li>
+                        </ul>
                     </td>
-                    
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
