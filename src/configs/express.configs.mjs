@@ -17,6 +17,7 @@ class App {
     init() {
         this.initMiddlewares();
         this.initRoute();
+        this.initStatics();
         return this.app;
     }
 

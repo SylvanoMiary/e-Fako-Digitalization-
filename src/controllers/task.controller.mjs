@@ -11,8 +11,8 @@ class taskController {
 
 
     addTask(req, res) {
+        console.log(`task user controller called`);
         const newTask = req.body;
-        console.log("add task called");
         Tasks.create(newTask).then( ({ _id, taskOwn, dayRecov, timeRecov}) => {
             res.json( { _id, taskOwn, dayRecov, timeRecov} );
         });

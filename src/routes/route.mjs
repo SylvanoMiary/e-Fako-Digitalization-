@@ -30,6 +30,8 @@ router.route('/staff/:id')
 //task route----------------------------------------
 router.route('/task')
     .get(taskController.getTasks)
+
+router.route('/task')
     .post(taskController.addTask)
 
 router.route('/task/:id')
