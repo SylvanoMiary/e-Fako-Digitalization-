@@ -43,11 +43,7 @@
             </div>
         </div>
         <div class="tablesearch">
-<<<<<<< HEAD
             <Tablemanagement :line="secondtable" :data="staffs" :st="pers"/>
-=======
-            <Tablemanagement :line="secondtable" />
->>>>>>> c814518d4e269204efc49d9e030c1e552da3a701
         </div>
     </div>
 </template>
@@ -186,7 +182,6 @@ p {
 </style>
 
 <script>
-<<<<<<< HEAD
     import Headermanagement from '../components/Headermanagement.vue';
     import Personnelinformation from '../components/Personnelinformation.vue';
     import Tablemanagement from '../components/Tablemanagement.vue';
@@ -239,46 +234,9 @@ p {
                 .catch( error => {
                     console.log(error)
                 }) 
-=======
-import Headermanagement from '../components/Headermanagement.vue';
-import Personnelinformation from '../components/Personnelinformation.vue';
-import Tablemanagement from '../components/Tablemanagement.vue';
 
-export default {
-    components: {
-        Headermanagement,
-        Personnelinformation,
-        Tablemanagement
-    },
-    data() {
-        return {
-            identity: [
-                { title: "Name", value: "ABDOUL" },
-                { title: "Firstname", value: "RAZAK" },
-                { title: "Date of birth", value: "dd/mm/yyyy" },
-                { title: "Place of birth", value: "Anywhere" },
-                { title: "Family situation", value: "Divorced" },
-                { title: "Address", value: "Ambohipo" },
-                { title: "ID CARD", value: "**********" },
-                { title: "Nationality", value: "Malagasy" },
-            ],
-            situation: [
-                { title: "Hiring Date", value: "dd/mm/yyyy" },
-                { title: "Position held", value: "Driver" },
-                { title: "Driver license", value: "AA’BD" },
-                { title: "End of service", value: "dd/mm/yyyy" },
-            ],
-            experience: [
-                { title: "Study level", value: "" },
-                { title: "Training & diploma", value: "" },
-                { title: "Expriences", value: "" },
-            ],
-            table: ["Start Date", "End Date", "Raw wage", "Grant"],
-            secondtable: ["PERSONNEL ID", "NAME", "FIRST-NAME", "ADDRESS"]
->>>>>>> c814518d4e269204efc49d9e030c1e552da3a701
         }
     }
-}
 </script>
 
 

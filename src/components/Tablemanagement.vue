@@ -20,10 +20,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-
-    
-
     export default{
         data(){
             return{
@@ -33,16 +29,6 @@
 
         props:['line', 'data', 'st']    
     }
-=======
-export default {
-    data() {
-        return {
-
-        }
-    },
-    props: ['line']
-}
->>>>>>> c814518d4e269204efc49d9e030c1e552da3a701
 </script>
 
 <style>
