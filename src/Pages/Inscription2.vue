@@ -44,14 +44,14 @@
                         console.log(error);
                     });
 
-/*                 await axios.post("http://localhost:4200/api/user", this.user)
+                 await axios.post("http://localhost:4200/api/user", this.user)
                     .then( () => {
                         console.log(`post sent: user`);
                     })
                     .catch(error => {
                         sent = false;
                         console.log(error);
-                    });    */
+                    });    
 
                 sent? window.open("#/done" ,'Done'): console.log("ERROR");
                 
