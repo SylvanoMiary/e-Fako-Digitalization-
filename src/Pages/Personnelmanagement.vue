@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="tablesearch">
-            <Tablemanagement :line="secondtable"/>
+            <Tablemanagement :line="secondtable" :data="staffs" :st="pers"/>
         </div>
     </div>
 </template>
@@ -137,14 +137,15 @@
 <script>
     import Headermanagement from '../components/Headermanagement.vue';
     import Personnelinformation from '../components/Personnelinformation.vue';
-import Tablemanagement from '../components/Tablemanagement.vue';
+    import Tablemanagement from '../components/Tablemanagement.vue';
+    import axios from 'axios';
 
     export default{
         components:{
-    Headermanagement,
-    Personnelinformation,
-    Tablemanagement
-},
+            Headermanagement,
+            Personnelinformation,
+            Tablemanagement
+        },
         data(){
             return{
                 identity: [
@@ -169,8 +170,23 @@ import Tablemanagement from '../components/Tablemanagement.vue';
                     {title: "Expriences", value:""},
                 ],
                 table: ["Start Date", "End Date", "Raw wage", "Grant"],
-                secondtable: ["PERSONNEL ID", "NAME", "FIRST-NAME", "ADDRESS"]
+                secondtable: ["PERSONNEL ID", "NAME", "FIRST-NAME", "ADDRESS"],
+
+                //temporary table for personnal list
+                staffs: null,
+                pers: "staff"
             }
+        },
+
+        mounted() {
+            axios.get("http://localhost:4200/api/staff")
+                .then( response => {
+                    this.staffs = response.data;
+                    console.log(response.data);
+                })
+                .catch( error => {
+                    console.log(error)
+                }) 
         }
     }
 </script>

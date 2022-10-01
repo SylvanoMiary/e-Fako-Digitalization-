@@ -17,17 +17,17 @@
 </style>
 
 <script>
-import Headermanagement from '../components/Headermanagement.vue'
-import Sidebarmanagement from '../components/Sidebarmanagement.vue'
-import Tablemanagement from '../components/Tablemanagement.vue';
-import AboutClient from '../components/AboutClient.vue';
+    import Headermanagement from '../components/Headermanagement.vue'
+    import Sidebarmanagement from '../components/Sidebarmanagement.vue'
+    import Tablemanagement from '../components/Tablemanagement.vue';
+    import AboutClient from '../components/AboutClient.vue';
     export default{
         components:{
-    Headermanagement,
-    Sidebarmanagement,
-    Tablemanagement,
-    AboutClient
-}, 
+            Headermanagement,
+            Sidebarmanagement,
+            Tablemanagement,
+            AboutClient
+        }, 
         data(){
             return{
                 table:[       
@@ -41,6 +41,8 @@ import AboutClient from '../components/AboutClient.vue';
                 sidebar : ["Customer request", "Customer information", "Reconfirmation e-mail"]
             }
         },
+
+
         methods:{
             callback: function(n){
                 this.changeComponent = this.table[n]

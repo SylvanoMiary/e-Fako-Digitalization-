@@ -7,32 +7,62 @@
             return{
                 days:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                 hours: ["05:00", "06:00", "07:00", "08:00", "09:00", "10:00", "11:00"],
-                daysChecked : [],
-                hourChecked : "",
-                i: 0
+                user : {},
+                dayChecked: [],
+                timeRecov: ""
             }
-        }, 
+        },
+
         components:{
             Titleinscription
         },
+
+        props: ['state'],
+
+        created() {
+            this.taskOwn = this.state.f_Name;
+            this.user = this.state;
+        },
+
         methods: {
+            
             async submitHandler(){
-                let recovery = {};
-                [recovery.taskOwn, recovery.dayRecov, recovery.timeRecov] = [ '129' ,this.daysChecked, this.hourChecked]
+
+                let dayRecov = [...this.dayChecked];
+                let sent = true;
+                console.log(dayRecov);
+                let taskBody= {taskOwn: this.taskOwn, dayRecov: dayRecov, timeRecov: this.timeRecov};
+                console.log(taskBody)
+                alert(`out`);
                 
-                console.log(recovery);
-                let response = await axios.post("http://localhost:4200/api/task", recovery)
-                .then ( () => {
-                    console.log(`post sent: task`)
-                })
+                await axios.post("http://localhost:4200/api/task", taskBody)
+                    .then( () => {
+                        console.log(`post sent: task`);
+                    })
+                    .catch(error => {
+                        sent = false;
+                        console.log(error);
+                    });
+
+/*                 await axios.post("http://localhost:4200/api/user", this.user)
+                    .then( () => {
+                        console.log(`post sent: user`);
+                    })
+                    .catch(error => {
+                        sent = false;
+                        console.log(error);
+                    });    */
+
+                sent? window.open("#/done" ,'Done'): console.log("ERROR");
                 
-                //window.open("#/done" ,'Done')
             },
+
             oncheckDay(e){
-                this.daysChecked[this.i++] = e.target.value
+                this.dayChecked.push(e.target.value);
             },
+
             oncheckHour(e){
-                this.hourChecked = e.target.value
+                this.timeRecov = e.target.value;
             }
         }
     }
@@ -65,8 +95,7 @@
                     <div>
                         <button @click="submitHandler">SUBMIT</button>
                     </div>
-                </form>
-                
+                </form>     
             </div>
         </div>
     </div>

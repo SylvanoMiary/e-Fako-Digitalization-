@@ -1,6 +1,6 @@
 <script>
 import Titleinscription from "../components/Titleinscription.vue";
-import Service from "../services/userService.js";
+import nextInscription from "./Inscription2.vue";
 import axios from 'axios';
 
 export default{
@@ -9,21 +9,25 @@ export default{
             name: "",
             tel: "",
             mail: "",
-            adress: ""
+            adress: "",
+
+            next: "0",
+            user: {}
         }
     }, 
     components: {
-        Titleinscription
+        Titleinscription,
+        nextInscription
     },
     methods:{
         async nextHandler(){
-            let user = {};
-            [user.f_Name, user.phone, user.mail, user.adress] = [this.name, this.tel, this.mail, this.adress]
-
-            let response = await axios.post("http://localhost:4200/api/user", user)
+            [this.user.f_Name, this.user.phone, this.user.mail, this.user.adress] = [this.name, this.tel, this.mail, this.adress]
+            console.log(this.user);
+            this.next = '1';
+        /*let response = await axios.post("http://localhost:4200/api/user", user)
             .then ( () => {
                 console.log(`post sent`)
-            })
+            }) */
         }  
     }
 }
@@ -31,7 +35,7 @@ export default{
 </script>
 
 <template>
-    <div class="wrapper-inscription1">
+    <div v-if="next == '0'" class="wrapper-inscription1">
         <Titleinscription title="STEP 1" intro="Please enter your information"/>
         <div class="container-inscription">
             <form class="table">
@@ -46,12 +50,15 @@ export default{
                     </tr>
                     <tr>
                         <td colspan="2" class="button">
-                            <a href="#/inscription_step2" @click="nextHandler"><font-awesome-icon icon="arrow-circle-right" class="icon"/></a>
+                            <div @click="nextHandler"><font-awesome-icon icon="arrow-circle-right" class="icon"/></div>
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
+    </div>
+    <div v-if="next == '1'">
+        <nextInscription :state="user"/>
     </div>
 </template>
 

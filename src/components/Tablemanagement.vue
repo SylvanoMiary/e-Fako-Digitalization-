@@ -5,8 +5,14 @@
                 <td v-for="column in line">{{column}}</td>
             </thead>
             <tbody>
-                <tr>
-
+                <tr v-if="st == 'staff'" v-for="pers in data">
+                    <td>{{pers.regNumber}}</td>
+                    <td>{{pers.firstName}}</td>
+                    <td>{{pers.lastName}}</td>
+                    <td>{{pers.address}}</td>
+                </tr>
+                <tr v-if="st == 'task'" v-for="task in data">
+                    <td>{{task}}</td>
                 </tr>
             </tbody>
         </table>
@@ -14,13 +20,17 @@
 </template>
 
 <script>
+
+    
+
     export default{
         data(){
             return{
                 
             }
         },
-        props:['line']    
+
+        props:['line', 'data', 'st']    
     }
 </script>
 
