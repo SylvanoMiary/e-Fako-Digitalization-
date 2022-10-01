@@ -20,6 +20,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
     export default{
         data(){
             return{
@@ -29,6 +30,16 @@
 
         props:['line', 'data', 'st']    
     }
+=======
+export default {
+    data() {
+        return {
+
+        }
+    },
+    props: ['line']
+}
+>>>>>>> refs/remotes/origin/main
 </script>
 
 <style>
