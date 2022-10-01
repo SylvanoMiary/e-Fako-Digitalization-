@@ -12,7 +12,14 @@
                     <td>{{pers.address}}</td>
                 </tr>
                 <tr v-if="st == 'task'" v-for="task in data">
-                    <td>{{task}}</td>
+                    <td></td>
+                    <td>{{task.taskOwn}}</td>
+                    <td></td>
+                    <td>{{task.timeRecov}}</td>
+                    <td >
+                        <span v-for="it in task.dayRecov">{{it}}</span>
+                    </td>
+                    
                 </tr>
             </tbody>
         </table>
