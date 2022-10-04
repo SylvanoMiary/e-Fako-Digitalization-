@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <script>
 import Home from './Pages/Home.vue'
 import Inscription1 from './Pages/Inscription1.vue'
@@ -54,27 +53,3 @@ export default {
     text-align: center;
 }
 </style>
-=======
-<template>
-  <GeneralRules />
-</template>
-
-<script>
-//import CustomerManagement from './Pages/CustomerManagement.vue';
-//import Landingpage from './Pages/Landingpage.vue';
-//import CustomerInformation from './Pages/CustomerInformation.vue';
-import GeneralRules from './Pages/GeneralRules.vue';
-
-export default {
-  data() {
-    return
-  },
-  components: {
-    //CustomerManagement
-    //Landingpage
-    //CustomerInformation
-    GeneralRules
-  }
-}
-</script>
->>>>>>> cc613909b060dfbd16d4c621899c1a921bb3ba63
