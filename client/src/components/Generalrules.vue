@@ -1,7 +1,7 @@
 <template>
     <div class="container general" id="general_rules">
         <div class="right imgeneral">
-            <img src="icon.png" alt="">
+            <img src="../assets/icon.png" alt="">
         </div>
         <div class="left prevention">
             <h2> For prevention, security and health </h2>

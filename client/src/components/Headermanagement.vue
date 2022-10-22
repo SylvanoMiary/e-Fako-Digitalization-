@@ -1,7 +1,7 @@
 <template>
     <div class="header-management">
         <div>
-           <img src="icon.png" alt="e-fako"> 
+           <img src="../assets/icon.png" alt="e-fako"> 
         </div>
         <ul>
            <a href="#/admin/management">CUSTOMER MANAGEMENT</a>
